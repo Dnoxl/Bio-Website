@@ -48,6 +48,9 @@ p {
 }
 
 #dcserver-embed {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     position: fixed;
     right: 10px;
     bottom: 10px;
