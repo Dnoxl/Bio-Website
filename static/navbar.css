@@ -50,7 +50,7 @@
     font-family: 'Roboto', sans-serif;
     display: flex;
     text-decoration: none;
-    color: rgb(40, 40, 70);
+    color: rgb(40, 40, 60);
     font-variant: inherit;
     font-size: 20px;
 }
@@ -81,6 +81,8 @@
     }
 
     .nav {
+        border-start-end-radius: 20px;
+        border-end-end-radius: 20px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
