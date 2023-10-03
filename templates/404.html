@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='404.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3;url={{ url_for('views.home') }}"> -->
+    <title>Page Not Found</title>
+</head>
+{% extends "navbar.html" %}
+{% block content %}
+
+<body>
+    <h1>The Page you are looking for is not available.</h1>
+    <p>You will be redirected to the Homepage.</p>
+    <div id="img-container">
+        <img src="{{ url_for('static', filename='images/404.png') }}" alt="404 - Page not found" width="256px" height="256px">
+    </div>
+    <br>    
+    <a id="erricon" href="https://www.flaticon.com/free-icons/error" title="error icons">Error icons created by Freepik - Flaticon</a>
+</body>
+{% endblock %}
+
+</html>

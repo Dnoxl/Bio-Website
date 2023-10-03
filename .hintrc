@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "manifest-file-extension": "off",
+    "axe/time-and-media": [
+      "default",
+      {
+        "meta-refresh": "off"
+      }
+    ]
+  }
+}
