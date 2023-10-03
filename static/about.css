@@ -11,6 +11,8 @@ body {
 }
 
 h1 {
+    padding-left: 30px;
+    padding-right: 30px;
     color: rgb(150, 150, 200);
     transform: translateY(25%);
     font-size: 2rem;
@@ -20,6 +22,8 @@ h1 {
 }
 
 p {
+    padding-left: 30px;
+    padding-right: 30px;
     color: rgb(150, 150, 200);
     margin-top: 25px;
     font-size: 1.5rem;
@@ -28,18 +32,39 @@ p {
     text-align: center;
 }
 
-#dcserver-embed {
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#age {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 2s;
+    /* 2 seconds animation duration */
+}
+
+#info {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 4s;
 }
 
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         display: flex;
         justify-content: center;
         text-align: center;
@@ -50,15 +75,5 @@ p {
         display: flex;
         justify-content: center;
         text-align: center;
-    }
-
-    iframe {
-        visibility: hidden;
-    }
-}
-
-@media screen and (max-height: 650px) {
-    iframe {
-        visibility: hidden;
     }
 }
