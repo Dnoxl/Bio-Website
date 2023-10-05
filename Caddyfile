@@ -5,3 +5,10 @@ www.dnoxl-dev.de {
 dnoxl-dev.de {
     reverse_proxy localhost:8000
 }
+
+(cors) {
+    @origin header Origin {args.0}
+    header @origin {
+        Cross-Origin-Embedder-Policy: credentialless
+    }
+}
