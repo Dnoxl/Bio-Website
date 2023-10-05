@@ -7,9 +7,11 @@ dnoxl-dev.de {
 }
 
 (cors) {
-    @origin header Origin {args.0}
-    header @origin {
-        Cross-Origin-Embedder-Policy credentialless
-        Cross-Origin-Resource-Policy cross-origin
-    }
+	@origin header Origin {args.0}
+	header @origin {
+		Access-Control-Allow-Origin "{args.0}"
+		Access-Control-Allow-Methods "OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE"
+		Cross-Origin-Embedder-Policy require-corp
+		Cross-Origin-Opener-Policy same-origin
+	}
 }
