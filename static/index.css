@@ -69,7 +69,6 @@ p {
     animation-delay: 1s;
     animation-fill-mode: backwards;
 }
-
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
