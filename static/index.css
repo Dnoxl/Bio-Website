@@ -28,15 +28,6 @@ p {
     text-align: center;
 }
 
-#dcserver-embed {
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -69,6 +60,16 @@ p {
     animation-delay: 1s;
     animation-fill-mode: backwards;
 }
+
+#dcserver-embed {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
