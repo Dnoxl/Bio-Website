@@ -46,22 +46,6 @@
     padding: 0 10px;
 }
 
-#proj-list {
-    display: none;
-    flex-direction: column;
-    top: 58px;
-    background-color: rgba(150, 150, 200, 0.5);
-    border-radius: 0 0 20px 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#proj-list li {
-    display: flex;
-    align-items: center; /* Add this line */
-}
-
 ::selection {
     color: rgb(40, 40, 60);
     background: rgba(150, 150, 200, 0.5);
@@ -84,18 +68,6 @@
 }
 
 @media screen and (max-width: 480px) {
-
-    #proj-list {
-        z-index: 1;
-        display: none;
-        flex-direction: column;
-        top: 0;
-        background-color: rgba(150, 150, 200, 0.5);
-        border-radius: 0 0 0 0;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
 
     #navLogo {
         transition: transform 0.3s ease-out;
