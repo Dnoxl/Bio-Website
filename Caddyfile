@@ -1,3 +1,7 @@
+www.dnoxl-dev.de {
+    redir https://dnoxl-dev.de{uri}
+}
+
 dnoxl-dev.de {
     reverse_proxy localhost:8000
 }
