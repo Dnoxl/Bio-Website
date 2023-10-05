@@ -25,6 +25,8 @@ function toggleNav() {
     }
 };
 function resize() {
+    var x = document.getElementById("proj-list");
+    x.style.display = "none";
     if (window.innerWidth > 480) {
         nav = document.getElementById("myNav")
         if (nav.classList.contains("open")) {
