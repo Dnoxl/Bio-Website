@@ -9,6 +9,7 @@ dnoxl-dev.de {
 (cors) {
     @origin header Origin {args.0}
     header @origin {
-        Cross-Origin-Embedder-Policy: credentialless
+        Cross-Origin-Embedder-Policy credentialless
+        Cross-Origin-Resource-Policy cross-origin
     }
 }
