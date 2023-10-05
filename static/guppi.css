@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow: none;
+    background-color: rgba(40, 40, 60, 1);
+}
+
+h1 {
+    color: rgb(150, 150, 200);
+    transform: translateY(25%);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+p {
+    color: rgb(150, 150, 200);
+    margin-top: 25px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#introduction {
+    font-size: 3rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 2s;
+    animation-delay: .25s;
+    animation-fill-mode: backwards;
+}
+
+#info {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}

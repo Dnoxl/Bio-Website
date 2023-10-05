@@ -22,11 +22,15 @@
             alt="Logo" onclick="toggleNav()" onmouseover="logoOver()" onmouseout="logoOut()">
     </div>
     <nav class="nav" id="myNav">
-        <ul>
+        <ul id="nav-list">
             <li><a href="home">Home</a></li>
-            <li><a href="about">About</a></li>
+            <li><a id="proj-button" onclick="toggleProj()">Projects</a></li>
             <li><a href="https://github.com/Dnoxl">Github</a></li>
             <li><a href="https://discord.gg/4mTy82Qwrn">Discord</a></li>
+        </ul>
+        <ul id="proj-list">
+            <li><a href="projects">All</a></li>
+            <li><a href="guppi">G.U.P.P.I</a></li>
         </ul>
     </nav>
     <div class="extension" id="extension">
