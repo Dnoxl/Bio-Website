@@ -13,6 +13,6 @@ def not_found(e):
 def home():
     return redirect(url_for('views.home'))
 
-#if __name__ == '__main__':
-    #if sys.platform == 'win32':
-        #app.run(host='0.0.0.0', debug=True)
+if __name__ == '__main__':
+    if sys.platform == 'win32':
+        app.run(host='0.0.0.0', debug=True)

@@ -58,10 +58,17 @@ function toggleProj() {
 function setProjListPosition() {
     var projButton = document.getElementById("proj-button");
     var projList = document.getElementById("proj-list");
+    var nav = document.getElementById("myNav")
+    var navRect = nav.getBoundingClientRect();
     var buttonRect = projButton.getBoundingClientRect();
-    var listWidth = projList.getBoundingClientRect().width/2;
-    var centerX = buttonRect.left + buttonRect.width / 2;
-    projList.style.left = (centerX - listWidth) + "px";
-    console.log(listWidth)
+    var listRect = projList.getBoundingClientRect();
+    if (window.innerWidth > 480) {
+        var listWidth = listRect.width / 2;
+        var centerX = buttonRect.left + buttonRect.width / 2;
+        projList.style.left = (centerX - listWidth) + "px";
+    } else {
+        var navOffset = navRect.width;
+        projList.style.left = navOffset + "px";
+    }
 }
 window.addEventListener("resize", setProjListPosition);
