@@ -79,6 +79,7 @@ p {
     }
 
     p {
+margin-top: 35px;
         font-size: 1rem;
         display: flex;
         justify-content: center;
