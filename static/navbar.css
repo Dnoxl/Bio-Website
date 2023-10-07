@@ -70,7 +70,7 @@
 @media screen and (max-width: 480px) {
 
     #navLogo {
-        transition: transform 0.3s ease-out;
+        transition: transform 0.4s ease-out;
         display: flex;
         position: fixed;
         z-index: 1;
@@ -88,6 +88,7 @@
     }
 
     .nav {
+        border-radius: 0 15px 15px 0;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -104,5 +105,6 @@
         align-content: flex-end;
         flex-wrap: wrap;
         flex-direction: column;
+        transform: translateX(10%);
     }
 }

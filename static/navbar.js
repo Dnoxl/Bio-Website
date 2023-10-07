@@ -10,7 +10,7 @@ function logoOut() {
 function toggleNav() {
     var logo = document.getElementById("navLogo");
     var nav = document.getElementById("myNav");
-    if (window.innerWidth < 480) {
+    if (window.innerWidth <= 480) {
         if (nav.classList.contains("open")) {
             nav.classList.remove("open");
             currentRotation = "0deg";
@@ -25,8 +25,6 @@ function toggleNav() {
     }
 };
 function resize() {
-    var x = document.getElementById("proj-list");
-    x.style.display = "none";
     if (window.innerWidth > 480) {
         nav = document.getElementById("myNav")
         if (nav.classList.contains("open")) {
@@ -35,12 +33,8 @@ function resize() {
         currentRotation = "0deg";
         document.getElementById("navLogo").style.transform = "rotate(0deg)";
     }
-    if (window.innerWidth < 480) {
+    if (window.innerWidth <= 480) {
         nav = document.getElementById("myNav")
-        var x = document.getElementById("proj-list");
-        if (x.style.display === "flex") {
-            x.style.display = "none";
-        }
         if (nav.classList.contains("open")) {
             nav.classList.remove("open");
         }
@@ -48,29 +42,3 @@ function resize() {
         document.getElementById("navLogo").style.transform = "rotate(0deg)";
     }
 };
-function toggleProj() {
-    var x = document.getElementById("proj-list");
-    if (x.style.display === "none") {
-        x.style.display = "flex";
-        setProjListPosition()
-    } else {
-        x.style.display = "none";
-    }
-}
-function setProjListPosition() {
-    var projButton = document.getElementById("proj-button");
-    var projList = document.getElementById("proj-list");
-    var nav = document.getElementById("myNav")
-    var navRect = nav.getBoundingClientRect();
-    var buttonRect = projButton.getBoundingClientRect();
-    var listRect = projList.getBoundingClientRect();
-    if (window.innerWidth > 480) {
-        var listWidth = listRect.width / 2;
-        var centerX = buttonRect.left + buttonRect.width / 2;
-        projList.style.left = (centerX - listWidth) + "px";
-    } else {
-        var navOffset = navRect.width;
-        projList.style.left = navOffset + "px";
-    }
-}
-window.addEventListener("resize", setProjListPosition);
