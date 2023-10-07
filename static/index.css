@@ -61,14 +61,30 @@ p {
     animation-fill-mode: backwards;
 }
 
-#dcserver-embed {
-    visibility: visible;
+@keyframes slideInEmbed {
+    from {
+        transform: translateX(150%);
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+        transform: translateX(0%);
+    }
+}
+
+.dcserver-embed {
+    visibility: hidden;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
     position: fixed;
     right: 10px;
     bottom: 10px;
+}
+
+.dcserver-embed.open {
+    animation: slideInEmbed 1s;
+    animation-fill-mode: backwards;
 }
 
 @media screen and (max-width: 480px) {
